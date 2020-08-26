@@ -11,6 +11,15 @@ class Account extends Base
             'POST'
         );
     }
+    
+    public function showall($data = [])
+    {
+        return $this->client->request(
+            'contacts/',
+            $data,
+            'GET'
+        );
+    }
 
     public function show($id , $data = [])
     {
